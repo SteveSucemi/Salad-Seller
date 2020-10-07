@@ -133,7 +133,6 @@ header {
     padding: 30px;
     background: white;
     z-index: 2;
-
 }
 
 .info-header {
@@ -142,13 +141,26 @@ header {
 }
 
 .logo {
-    width: 50%;
-    height: 55%;
+    width: 50vw;
+    height: 50%;
     position: relative;
     left: 0;
     top: 0;
 
 }
+
+/*
+    .logo {
+        width: 50vw;
+        height: auto;
+        position: relative;
+        left: 0;
+    }
+
+    .logo img {
+        width: 100%;
+    }
+*/
 
 .logo img {
     left: 0;
