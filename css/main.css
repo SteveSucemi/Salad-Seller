@@ -132,7 +132,7 @@ header {
     position: fixed;
     top: 0px;
     left: 0px;
-    height: 50vh;
+    height: 120px;
     overflow: hidden;
     padding: 30px;
     background: white;
@@ -140,13 +140,13 @@ header {
 }
 
 .info-header {
-    height: 145px;
+    height: 120px;
     background: #f0eda1;
 }
 
 .logo {
-    width: 50vw;
-    height: 50%;
+    width: auto;
+    height: 60px;
     position: relative;
     left: 0;
     top: 0;
@@ -180,7 +180,6 @@ header {
     top: 0;
     left: 33%;
     padding: 30px;
-    opacity: 0;
 }
 
 .info-header .imgbtn {
@@ -196,6 +195,7 @@ header {
 #imgbtn {
     font-family: 'GT America', sans-serif;
     font-size: 1em;
+    margin-bottom: 0.3em;
 }
 
 input {
@@ -208,19 +208,23 @@ input {
 
 nav {
     display: flex;
+    justify-items: center;
     justify-content: space-between;
-    align-items: flex-end;
+    align-items: center;
     position: absolute;
-    width: 280px;
-    height: auto;
-    bottom: 30px;
+    width: 250px;
+    height: 120px;
+    top: 5px;
     right: 30px;
 }
 
 .navicon {
-    width: 60px;
+    width: 70px;
     display: flex;
     flex-wrap: wrap;
+    justify-items: center;
+    justify-content: center;
+    align-items: center;
 }
 
 .navicon span {
@@ -228,31 +232,31 @@ nav {
     display: block;
     text-align: center;
     font-family: 'GT Alpina', serif;
-    font-size: 24px;
+    font-size: 18px;
 }
 
 .navicon img {
+    margin-bottom: 5px;
     width: 100%;
-    max-height: 80px;
+    max-height: 50px;
 }
 
 .wrapper {
     width: 100%;
-    height: 100%;
-    max-height: calc(100% - 145px);
-    margin-top: 50vh;
+    height: calc(100% - 120px);
+    position: absolute;
+    margin-top: 0;
     bottom: 0;
     padding: 0 30px 0 30px;
 }
 
 .info-wrapper {
     width: 100%;
-    height: calc(100% - 145px);
+    height: calc(100% - 120px);
     padding: 0 30px 30px 30px;
     position: absolute;
     bottom: 0;
     background: #f0eda1;
-    overflow: hidden;
     display: flex;
     flex-wrap: nowrap;
 }
@@ -312,7 +316,7 @@ nav {
     width: 100%;
     height: 100%;
     overflow-y: scroll;
-    padding: 0 30px 0 30px;
+    padding: 0 10px 0 30px;
     text-align: center;
     display: grid;
 }
@@ -451,6 +455,7 @@ nav {
 .order {
     font-size: 72px;
     letter-spacing: -3px;
+    margin-bottom: 80px;
 }
 
 .menu {
@@ -519,27 +524,41 @@ nav {
     margin-bottom: 2em;
 }
 
+
 .slogans img {
     margin-bottom: 120px;
 }
 
-@media screen and (min-width: 1511px) and (max-width: 1900px) {
+.mobile-nav {
+    display: none;
+    position: fixed;
+    z-index: 999;
+}
 
+.mobile-nav .navicon {
+    width: auto;
+}
 
+#menu {
+    position: relative;
+    width: 1px;
+    height: 1px;
+}
 
-    .operationcon {
-        font-size: 0.8em;
-    }
-
+#order {
+    position: relative;
+    width: 1px;
+    height: 1px;
 }
 
 
-@media screen and (min-width: 1151px) and (max-width: 1510px) {
+
+@media screen and (min-width: 1001px) and (max-width: 1510px) {
 
 
     .logo {
-        width: 50%;
-        height: 40%;
+        width: auto;
+        height: 60px;
         position: relative;
         left: 0;
         top: 0;
@@ -556,29 +575,54 @@ nav {
         width: 100%;
     }
 
+
     nav {
         display: flex;
+        justify-items: center;
         justify-content: space-between;
-        align-items: flex-end;
+        align-items: center;
         position: absolute;
-        width: 280px;
-        height: 86px;
-        top: 30px;
+        width: 250px;
+        height: 120px;
+        top: 5px;
         right: 30px;
+    }
+
+    .navicon {
+        width: 70px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-items: center;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .navicon span {
+        width: 100%;
+        display: block;
+        text-align: center;
+        font-family: 'GT Alpina', serif;
+        font-size: 18px;
+    }
+
+    .navicon img {
+        margin-bottom: 5px;
+        width: 100%;
+        max-height: 50px;
     }
 
 
 
 }
 
-@media screen and (min-width: 901px) and (max-width: 1150px) {
+@media screen and (min-width: 601px) and (max-width: 1000px) {
 
     .logo {
-        width: 300px;
-        height: 100px;
+        width: 245px;
+        height: auto;
         position: absolute;
         left: 30px;
-        top: 15px;
+        top: 32px;
 
     }
 
@@ -589,6 +633,10 @@ nav {
         width: 100%;
     }
 
+
+    .imgbtn {
+        display: none;
+    }
 
     .operationcon {
         width: 100%;
@@ -606,20 +654,42 @@ nav {
 
     nav {
         display: flex;
+        justify-items: center;
         justify-content: space-between;
-        align-items: flex-end;
+        align-items: center;
         position: absolute;
-        width: 280px;
-        height: 86px;
-        top: 30px;
+        width: 220px;
+        height: 90px;
+        top: 18px;
         right: 30px;
+    }
+
+    .navicon {
+        width: 60px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-items: center;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .navicon span {
+        width: 100%;
+        display: block;
+        text-align: center;
+        font-family: 'GT Alpina', serif;
+        font-size: 16px;
+    }
+
+    .navicon img {
+        margin-bottom: 5px;
+        width: 100%;
+        max-height: 45px;
     }
 
     .wrapper {
         width: 100%;
-        height: auto;
-        max-height: calc(100% - 145px);
-        margin-top: 50vh;
+        height: calc(100% - 120px);
         bottom: 0;
         padding: 0 30px 0 30px;
     }
@@ -659,6 +729,7 @@ nav {
         height: auto;
         padding-right: 30px;
         border-right: 1px solid black;
+
     }
 
 
@@ -685,8 +756,24 @@ nav {
         padding: 0;
     }
 
+
+    .info-wrapper::-webkit-scrollbar {
+        width: 0px;
+    }
+
+
     .order-box::-webkit-scrollbar {
         width: 0px;
+    }
+
+    .order-des img {
+        margin: 0 auto;
+        width: 40%;
+    }
+
+    .slogans img {
+        width: 60%;
+        margin-bottom: 120px;
     }
 
     .menucon::-webkit-scrollbar-thumb {
@@ -705,7 +792,7 @@ nav {
     .info-wrapper {
         width: 100%;
         height: auto;
-        max-height: calc(100% - 145px);
+        max-height: calc(100% - 120px);
         padding: 0 30px 30px 30px;
         bottom: 0;
         background: #f0eda1;
@@ -759,11 +846,27 @@ nav {
         margin-bottom: 0;
     }
 
+    .mobile-nav {
+        display: block;
+        bottom: 30px;
+        right: 30px;
+    }
 
+    .mobile-nav span {
+        font-size: 28px;
+    }
+
+    #menu {
+        top: -120px;
+    }
+    
+    #order {
+        top: -120px;
+    }
 
 }
 
-@media screen and (min-width: 0px) and (max-width: 900px) {
+@media screen and (min-width: 0px) and (max-width: 600px) {
 
 
 
@@ -772,22 +875,22 @@ nav {
         position: fixed;
         top: 0px;
         left: 0px;
-        height: 120px;
+        height: 80px;
         overflow: hidden;
         padding: 20px;
         background: white;
         z-index: 2;
     }
-    
+
     .info-header {
-    height: 120px;
-    background: #f0eda1;
-}
+        height: 80px;
+        background: #f0eda1;
+    }
 
     .wrapper {
         width: 100%;
         height: auto;
-        max-height: calc(100% - 120px);
+        margin-top: 80px;
         position: relative;
         padding: 0 20px 0 20px;
         bottom: 0;
@@ -889,6 +992,11 @@ nav {
         margin-bottom: 0px;
     }
 
+    .order-des img {
+        margin: 0 auto;
+        width: 60%;
+    }
+
     .menucon::-webkit-scrollbar-thumb {
         background: black;
     }
@@ -900,7 +1008,7 @@ nav {
         height: 50px;
         position: absolute;
         left: 20px;
-        top: 10px;
+        top: 15px;
 
     }
 
@@ -926,18 +1034,23 @@ nav {
 
     nav {
         display: flex;
+        justify-items: center;
         justify-content: space-between;
+        align-items: center;
         position: absolute;
-        width: 140px;
-        height: 43px;
-        top: 15px;
+        width: 126px;
+        height: 50px;
+        top: 18px;
         right: 20px;
     }
 
     .navicon {
-        width: 30px;
+        width: 35px;
         display: flex;
         flex-wrap: wrap;
+        justify-items: center;
+        justify-content: center;
+        align-items: center;
     }
 
     .navicon span {
@@ -949,17 +1062,13 @@ nav {
     }
 
     .navicon img {
+        margin-bottom: 5px;
         width: 100%;
-        max-height: 80px;
+        max-height: 28px;
     }
 
     .imgbtn {
-        position: relative;
-        width: 100%;
-        top: 60px;
-        left: 0;
-        padding: 0px;
-        opacity: 1;
+        display: none;
     }
 
     .fake-border {
@@ -988,17 +1097,22 @@ nav {
         display: none;
     }
 
+    .info-wrapper::-webkit-scrollbar {
+        width: 0px;
+    }
+
     .info-wrapper {
         width: 100%;
         height: auto;
-        max-height: calc(100% - 120px);
-        padding: 0 30px 30px 30px;
+        margin-top: 80px;
+        max-height: calc(100% - 80px);
+        padding: 0 20px 20px 20px;
         bottom: 0;
         background: #f0eda1;
         display: flex;
         flex-wrap: wrap;
-        overflow-y: scroll;
     }
+
 
 
     .info-col {
@@ -1017,6 +1131,7 @@ nav {
     .info-col.middle {
         margin-right: 0px;
         order: 3;
+        margin-bottom: 30px;
     }
 
     .order-box.info {
@@ -1045,17 +1160,36 @@ nav {
     .info-op .kor {
         margin-bottom: 30px;
     }
-    
-    .order-box.info .order-des {
-        margin-bottom: 30px;
+
+    .order-des {
+        margin-bottom: 60px;
     }
-    
+
     .slogans.info {
         display: block;
     }
-    
+
     .slogans.info img {
         margin-bottom: 30px;
+    }
+
+    .mobile-nav {
+        display: block;
+        bottom: 20px;
+        right: 20px;
+    }
+    
+
+    .mobile-nav span {
+        font-size: 24px;
+    }
+    
+    #menu {
+        top: -80px;
+    }
+    
+    #order {
+        top: -80px;
     }
 
 }
