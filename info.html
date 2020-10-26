@@ -172,11 +172,12 @@
 
     </script>
     <script src="https://code.jquery.com/jquery-latest.min.js"></script>
-    
+
     <style>
         body {
             background: #f0eda1;
         }
+
     </style>
 </head>
 
@@ -189,39 +190,49 @@
         </style>
         <div style="display:block">Please click <a href="http://saladseller.com/?PageSpeed=noscript">here</a> if you are not redirected within a few seconds.</div>
     </noscript>
-    <header class="info-header">
+    <header style="background: #f0eda1;">
         <div class="logo">
-           <a href="index.html">
-            <img src="img/logo.svg">
+            <a href="index.html">
+                <img src="img/logo.svg">
             </a>
         </div>
 
+        <div class="imgbtn">
+            <span lang="en">
+                <a href="index.html">
+                    BACK TO HOME ↩
+                </a>
+            </span>
+        </div>
 
         <nav>
-            <a href="" target="_blank">
-                <div class=navicon>
+
+            <div class=navicon>
+                <a href="https://smartstore.naver.com/cellartorafter">
                     <img src="img/icon_shop.svg">
                     <span>SHOP</span>
-                </div>
-            </a>
-            <a href="https://www.instagram.com/saladseller/" target="_blank">
-                <div class=navicon>
-                    <img src="img/icon_news.svg" style="transform: translateY(-13%);">
-                    <span>NEWS</span>
-                </div>
-            </a>
+                </a>
+            </div>
 
-            <a href="info.html">
-                <div class=navicon>
+            <div class=navicon>
+                <a href="https://www.instagram.com/saladseller/" target="_blank">
+                    <img src="img/icon_news.svg">
+                    <span>NEWS</span>
+                </a>
+            </div>
+
+
+            <div class=navicon>
+                <a href="info.html">
                     <img src="img/icon_info.svg">
                     <span>INFO</span>
-                </div>
-            </a>
+                </a>
+            </div>
         </nav>
     </header>
 
-    <div class="info-wrapper">
-
+    <div class="wrapper info">
+        <div class="container info">
             <div class="info-col first">
                 <img src="img/info.jpg">
             </div>
@@ -235,63 +246,69 @@
                 되었으면 좋겠습니다.
                 <div class="info-op">
                     <div class="kor">
-                    월요일 휴무 <br>
-                    화-토 11-9 (주문 마감 8:30)<br>
-                    일, 공휴일 11-7 (주문 마감 6:30)<br>
-                    브레이크 타임 3-4:30<br>
-                    토, 일, 공휴일은 브레이크 타임 없습니다.<br>
-                    02 794 0282<br>
-                    서울 용산구 대사관로5길 28, 샐러드셀러<br>
+                        월 휴무 <br>
+                        화-토 11-9 (주문 마감 8:30)<br>
+                        일, 공휴일 11-7 (주문 마감 6:30)<br>
+                        브레이크 타임 3-4:30 (토, 일 공휴일은 브레이크타임 없습니다.)<br>
                     </div>
                     <div class="eng">
-                    <span lang="en">Mon Off<br>
-                        Tue-Sat: 11am-9pm closed 8:30pm<br>
-                        Sun: 11am-7pm closed 6:30pm<br>
-                        Break time: 3-4:30pm<br>
-                        +82 2 794 0282<br>
-                        04400 28, Daesagwan-ro 5-gil,<br>
-                        Yongsan-gu, Seoul, Republic of Korea<br>
-                    </span>
+                        <span lang="en">
+                            Mon Off<br>
+                            Tue-Sat 11-9 (Last Order 8:30)<br>
+                            Sun, National Holiday 11-7 (Last Order 6:30)<br>
+                            Break Time 3-4:30 (No Break Time on Weekend, National Holiday)<br>
+                        </span>
                     </div>
 
                 </div>
             </div>
             <div class="order-box info">
+                <div id="order"></div>
                 <div class="order-des">
                     <span lang="en" class=order>ORDER</span>
-                    <img src="img/order_illust.png"><br><br>
-                    <div class="title">
-                        <span lang="en">Pick Up</span><br>
-                        <span>포장 주문</span>
-                    </div>
-                    1. 매장 전화로 주문<br>
-                    원하는 메뉴를 고른 후, 전화로 주문해 주세요.<br>
-                    주문시 픽업 시간을 함께 알려주세요.<br><br>
-                    2. 배달의민족 앱으로 주문<br>
-                    배달의민족 앱 실행 후 “샐러드셀러”를 검색해주세요.<br>
-                    (검색이 안 된다면 전화로 주문해주세요.)<br>
-                    샐러드셀러 페이지 오른쪽, “포장주문” 선택 후 주문해주세요."<br><br><br>
+                    <img src="img/order_illust.svg"><br><br><br><br><br>
 
-                    <div class="title">
-                        <span lang="en">Delivery</span><br>
-                        <span>배달 주문</span>
+                    <div class="ordertype">
+                        <div class="title">
+                            <img src="./img/order_pickup.svg"><br>
+                            <span>포장 주문</span>
+                        </div>
+                        <h3>1. 매장 전화로 주문</h3>
+                        TEL. 02 794 0282<br><br>
+                        원하는 메뉴를 고른 후, 전화로 주문해 주세요.<br>
+                        주문시 픽업 시간을 함께 알려주세요.<br><br>
+                        <h3>2. 배달의민족 앱으로 주문</h3><br>
+                        배달의민족 앱 실행 후 “샐러드셀러”를 검색해주세요.<br>
+                        (검색이 안 된다면 전화로 주문해주세요.)<br>
+                        샐러드셀러 페이지 오른쪽, “포장주문” 선택 후 주문해주세요."
                     </div>
-                    배달의민족 앱 실행 후 “샐러드셀러”를 검색해주세요.<br>
-                    (검색이 안 된다면 배달 불가 지역입니다.)<br>
-                    샐러드셀러 페이지에 접속 하셨다면, 정보창에 영업정보 확인 후 주문해주세요.<br><br><br><br><br>
-                    <img src="img/order_illust2.png"><br><br>
-                    <a href="https://baemin.me/sfwp_clr0" target="_blank">
-                    <div class="title">
-                        <span>배달의 민족 바로가기</span>
+
+                    <div class="ordertype">
+                        <div class="title">
+                            <img src="./img/order_delivery.svg"><br>
+                            <span>배달 주문</span>
+                        </div>
+                        배달의민족 앱 실행 후 “샐러드셀러”를 검색해주세요.<br>
+                        (검색이 안 된다면 배달 불가 지역입니다.)<br>
+                        샐러드셀러 페이지에 접속 하셨다면, 정보창에 영업정보 확인 후 주문해주세요.
                     </div>
-                    </a>
+
+                    <div class="ordertype">
+                        <img src="img/baemin_illust.svg"><br><br>
+                        <div class="title">
+                            <a href="https://baemin.me/sfwp_clr0" target="_blank">
+                                <span>배달의 민족 바로가기</span>
+                            </a>
+                        </div>
+                    </div>
                 </div>
-                <div class="slogans info">
-                <img src="img/slogan_1.svg"><br><br><br>
-                <img src="img/slogan_2.svg">
+                <div class="slogans">
+                    <img src="img/slogan01.svg"><br><br>
+                    <img src="img/slogan02.svg"><br><br><br>
                 </div>
             </div>
-    
+        </div>
+
     </div>
 
 </body>

@@ -129,35 +129,29 @@ body::-webkit-scrollbar {
 
 header {
     width: 100%;
+    height: auto;
     position: fixed;
     top: 0px;
     left: 0px;
-    height: 120px;
     overflow: hidden;
     padding: 30px;
     background: white;
     z-index: 2;
 }
 
-.info-header {
-    height: 120px;
-    background: #f0eda1;
-}
-
 .logo {
-    width: auto;
-    height: 60px;
+    height: 12vh;
     position: relative;
     left: 0;
     top: 0;
-
+    text-align: left;
 }
-
 
 .logo img {
-    left: 0;
     height: 100%;
 }
+
+
 
 .operationcon {
     position: absolute;
@@ -177,30 +171,34 @@ header {
 .imgbtn {
     position: absolute;
     width: 33%;
+    height: 100%;
     top: 0;
     left: 33%;
     padding: 30px;
-}
-
-
-.info-header .imgbtn {
-    opacity: 1;
+    display: flex;
+    align-items: flex-end;
+    flex-wrap: wrap;
+    flex
 }
 
 .imgbtn span {
     display: block;
     font-family: 'GT America', sans-serif;
     right: 0;
+    width: 100%;
 }
 
-.imgbtn span:hover {
-    text-decoration: underline;
+.imgbtn span a:hover {
+    color: rgb(0, 120, 120);
+    font-weight: 600;
+    text-decoration: none;
 }
 
 #imgbtn {
+    display: block;
     font-family: 'GT America', sans-serif;
     font-size: 1em;
-    margin-bottom: 0.3em;
+    height: 100%;
 }
 
 input {
@@ -213,7 +211,17 @@ input {
 
 input:hover {
     cursor: pointer;
-    text-decoration: underline;
+    color: rgb(0, 120, 120);
+    font-weight: 600;
+}
+
+.imgbtn span:after {
+    height: 1px;
+    display: block;
+    width: 100%;
+    background: black;
+    content: '';
+    margin-top: 5px;
 }
 
 nav {
@@ -222,14 +230,14 @@ nav {
     justify-content: space-between;
     align-items: center;
     position: absolute;
-    width: 250px;
-    height: 120px;
-    top: 5px;
-    right: 30px;
+    width: 24vw;
+    height: 100%;
+    top: 0;
+    right: calc(3.3vw + 30px);
 }
 
 .navicon {
-    width: 70px;
+    width: 30%;
     display: flex;
     flex-wrap: wrap;
     justify-items: center;
@@ -242,33 +250,26 @@ nav {
     display: block;
     text-align: center;
     font-family: 'GT Alpina', serif;
-    font-size: 18px;
+    font-size: 17px;
 }
 
 .navicon img {
     margin-bottom: 5px;
     width: 100%;
-    max-height: 50px;
+    max-height: 85px;
 }
 
 .wrapper {
     width: 100%;
-    height: calc(100% - 120px);
+    height: calc(88vh - 60px);
     position: absolute;
     margin-top: 0;
     bottom: 0;
     padding: 0 30px 0 30px;
 }
 
-.info-wrapper {
-    width: 100%;
-    height: calc(100% - 120px);
+.wrapper.info {
     padding: 0 30px 30px 30px;
-    position: absolute;
-    bottom: 0;
-    background: #f0eda1;
-    display: flex;
-    flex-wrap: nowrap;
 }
 
 .container {
@@ -279,18 +280,56 @@ nav {
     overflow-y: hidden;
 }
 
-
-
+.container.info {
+    grid-template-columns: 1fr 1fr 1fr;
+    height: 100%;
+    grid-column-gap: 30px;
+}
 
 .menucon {
     width: 100%;
     height: auto;
     display: flex;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     overflow-y: scroll;
     overflow-x: hidden;
     border-right: 1px solid black;
 }
+
+.menutype {
+    width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    margin-right: 10px;
+}
+
+.menu-title {
+    width: calc(100% - 10px);
+    font-family: 'GT America', sans-serif;
+    font-size: 32px;
+    border: 1px black solid;
+    border-radius: 40px;
+    padding: 5px;
+    text-align: center;
+}
+
+.menu-left-col {
+    width: 50%;
+    height: auto;
+    flex-direction: column;
+    padding-right: 30px;
+    border-right: 1px black solid;
+    padding-top: 30px;
+}
+
+.menu-right-col {
+    width: 50%;
+    height: auto;
+    flex-direction: column;
+    padding-left: 30px;
+    padding-top: 30px;
+}
+
 
 .menucon::-webkit-scrollbar {
     width: 20px;
@@ -300,27 +339,9 @@ nav {
     background: black;
 }
 
-.menu1 {
-    width: 50%;
-    height: 100%;
-    padding-right: 30px;
+.menucon-mobile {
+    display: none;
 }
-
-
-
-.menu2 {
-    width: 50%;
-    height: 100%;
-    padding-left: 30px;
-    padding-right: 10px;
-}
-
-.menu2 .dish:nth-last-child(1) {
-    margin-bottom: 0;
-    border-bottom: none;
-    padding-bottom: none;
-}
-
 
 .order-box {
     width: 100%;
@@ -339,20 +360,35 @@ nav {
     background: black;
 }
 
+
+
 .order-box.info {
-    width: 33%;
+    width: 100%;
     border-left: solid 1px black;
 }
 
 
 
+
 .dish {
+    width: 100%;
     display: grid;
     grid-template-columns: auto;
     grid-row-gap: 15px;
     padding-bottom: 30px;
     border-bottom: black solid 1px;
-    margin-bottom: 30px
+    margin-bottom: 30px;
+}
+
+
+.menu-left-col .dish:nth-last-child(1) {
+    border-bottom: none;
+    margin-bottom: 100px;
+}
+
+.menu-right-col .dish:nth-last-child(1) {
+    border-bottom: none;
+    margin-bottom: 100px;
 }
 
 .add {
@@ -362,85 +398,80 @@ nav {
     word-break: keep-all;
 }
 
-.add.drink {
-    word-break: normal;
-}
-
-.drink-name {
-    text-overflow: ellipsis;
-    word-break: normal;
-    overflow: hidden;
-}
-
-.long-name {
-    text-overflow: ellipsis;
-    word-break: keep-all;
-}
-
 .add p:nth-child(2) {
     text-align: right;
 }
 
-.add-sorting {
-    display: inline-block;
-    width: auto;
-    padding: 0 4px;
-    margin-left: 4px;
-    border: black solid 1px;
-    text-align: center;
-    white-space: nowrap;
-    font-size: 0.5em;
-}
-
 .add span[lang=en] {
-    font-family: 'GT Alpina', serif;
+    font-family: 'GT America', sans-serif;
     white-space: nowrap;
 }
 
 .title {
     font-size: 32px;
     line-height: 120%;
+
 }
 
 .title span[lang="en"] {
-    font-family: 'GT Alpina', serif;
+    font-family: 'GT America', sans-serif;
     white-space: nowrap;
 }
 
-.sorting div {
-    display: inline;
+
+.sorting span[lang="en"] {
+    font-family: 'GT America', sans-serif;
+}
+
+.season {
+    font-size: 16px;
+}
+
+.price {
     width: 100%;
-    padding: 3px 6px;
-    border: black solid 1px;
-    text-align: center;
-    white-space: nowrap;
-    line-height: 240%;
-}
-
-.sorting div:hover {
-    background: black;
-    color: white;
+    display: flex;
+    flex-wrap: nowrap;
 }
 
 .price span {
-    font-size: 12px;
+    display: inline-block;
+    width: 100%;
 }
 
 .price span[lang=en] {
+    width: auto;
     font-family: 'GT Alpina', sans-serif;
+    font-size: 17px;
     white-space: nowrap;
+    text-align: right;
+    position: relative;
+    top: 4px;
+}
+
+.vegan {
+    color: rgb(0, 120, 120);
+}
+
+.best {
+    color: rgb(230, 50, 30);
 }
 
 .ingredients {
-    font-size: 12px;
+    word-break: keep-all;
 }
 
 .ingredients span[lang="en"] {
-    font-family: 'GT Alpina', serif;
+    font-family: 'GT America', sans-serif;
 }
 
 .menu-pictures img {
     width: 100%;
+}
+
+.menu-pictures span {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
 }
 
 .imghide {
@@ -455,7 +486,8 @@ nav {
     width: 100%;
     display: grid;
     grid-template-rows: auto;
-    margin-bottom: 120px;
+    margin-bottom: 60px;
+    font-size: 12px;
 }
 
 .order-des .title {
@@ -467,30 +499,39 @@ nav {
     width: 60%;
 }
 
+.ordertype {
+    border-bottom: 1px solid black;
+    padding-bottom: 60px;
+    margin-bottom: 60px;
+}
+
+.ordertype:nth-last-child(1) {
+    border: none;
+}
+
+.ordertype a:hover {
+    color: rgb(0, 120, 120);
+    font-weight: 600;
+    text-decoration: none;
+}
+
 .order {
     font-size: 72px;
     letter-spacing: -3px;
     margin-bottom: 80px;
 }
 
-.menu {
-    display: none;
-    font-size: 72px;
-    letter-spacing: -3px;
+.order-box .title img {
+    height: 52px;
 }
 
-.fake-border {
-    width: 1px;
-    height: 100%;
-    position: fixed;
-    background: black;
-    z-index: 1;
-    left: 33.3%;
+.order-box h3 {
+    margin: 0;
+    font-size: 20px;
 }
-
 
 .info-col {
-    width: 32%;
+    width: 100%;
     height: 100%;
     word-break: keep-all;
 }
@@ -576,83 +617,37 @@ nav {
 @media screen and (min-width: 1001px) and (max-width: 1510px) {
 
 
-    .logo {
-        width: auto;
-        height: 60px;
-        position: relative;
-        left: 0;
-        top: 0;
-
-    }
-
-    .logo img {
-        left: 0;
-        height: 100%;
-    }
-
-
     .operationcon {
         width: 100%;
-    }
-
-
-    nav {
-        display: flex;
-        justify-items: center;
-        justify-content: space-between;
-        align-items: center;
-        position: absolute;
-        width: 250px;
-        height: 120px;
-        top: 5px;
-        right: 30px;
-    }
-
-    .navicon {
-        width: 70px;
-        display: flex;
-        flex-wrap: wrap;
-        justify-items: center;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .navicon span {
-        width: 100%;
-        display: block;
-        text-align: center;
-        font-family: 'GT Alpina', serif;
-        font-size: 18px;
     }
 
     .navicon img {
         margin-bottom: 5px;
         width: 100%;
-        max-height: 50px;
+        max-height: 60px;
     }
 
-
+    .ingredients {
+        font-size: 12px;
+    }
 
 }
+
+/*태블릿*/
 
 @media screen and (min-width: 601px) and (max-width: 1000px) {
 
     .logo {
-        width: 245px;
-        height: auto;
-        position: absolute;
-        left: 30px;
-        top: 32px;
-
+        height: 7vh;
+        position: relative;
+        left: 0;
+        top: 0;
+        text-align: left;
     }
-
 
     .logo img {
-        top: 0;
-        left: 0;
-        width: 100%;
+        height: 100%;
     }
-
 
     .imgbtn {
         display: none;
@@ -678,14 +673,13 @@ nav {
         justify-content: space-between;
         align-items: center;
         position: absolute;
-        width: 220px;
-        height: 90px;
-        top: 18px;
+        width: 30vw;
+        height: 100%;
         right: 30px;
     }
 
     .navicon {
-        width: 60px;
+        width: 80px;
         display: flex;
         flex-wrap: wrap;
         justify-items: center;
@@ -704,12 +698,12 @@ nav {
     .navicon img {
         margin-bottom: 5px;
         width: 100%;
-        max-height: 45px;
+        max-height: 40px;
     }
 
     .wrapper {
         width: 100%;
-        height: calc(100% - 120px);
+        height: calc(93vh - 60px);
         bottom: 0;
         padding: 0 30px 0 30px;
     }
@@ -721,7 +715,16 @@ nav {
         flex-wrap: wrap;
         grid-template-columns: 100%;
         grid-template-rows: auto;
-        overflow-y: hidden;
+    }
+
+    .container.info {
+        height: 100%;
+        overflow-y: scroll;
+        padding-bottom: 30px;
+    }
+
+    .wrapper.info {
+        padding: 0 30px 0px 30px;
     }
 
     .menucon {
@@ -744,25 +747,29 @@ nav {
         background: black;
     }
 
-    .menu1 {
-        width: 50%;
-        height: auto;
-        padding-right: 30px;
-        border-right: 1px solid black;
-
+    .title {
+        font-size: 28px;
+        line-height: 120%;
+        overflow: auto;
     }
 
-
-
-    .menu2 {
-        width: 50%;
-        height: auto;
-        padding-left: 30px;
-        padding-right: 0px;
+    .title::-webkit-scrollbar {
+        height: 0;
     }
 
-    .fake-border {
-        display: none;
+    .title span[lang="ko"]::after {
+        content: "\A";
+        white-space: pre;
+    }
+
+    .title span[lang="en"] {
+        white-space: wrap;
+        word-break: normal;
+    }
+
+    .ingredients {
+        font-size: 12px;
+        word-break: keep-all;
     }
 
     .order-box {
@@ -776,11 +783,9 @@ nav {
         padding: 0;
     }
 
-
-    .info-wrapper::-webkit-scrollbar {
-        width: 0px;
+    .container::-webkit-scrollbar {
+        width: 0;
     }
-
 
     .order-box::-webkit-scrollbar {
         width: 0px;
@@ -955,12 +960,6 @@ nav {
         margin-bottom: 30px;
     }
 
-    .menu1 {
-        width: 100%;
-        height: auto;
-        padding-right: 0px;
-    }
-
     .title span[lang="ko"] {
         white-space: normal;
     }
@@ -976,15 +975,6 @@ nav {
 
     .sorting {
         flex-wrap: wrap;
-    }
-
-
-
-    .menu2 {
-        width: 100%;
-        height: auto;
-        padding-left: 0px;
-        padding-right: 0px;
     }
 
     .fake-border {
@@ -1151,7 +1141,6 @@ nav {
     .info-col.middle {
         margin-right: 0px;
         order: 3;
-        margin-bottom: 30px;
     }
 
     .order-box.info {
