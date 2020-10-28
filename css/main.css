@@ -64,7 +64,12 @@
     /* here you go, IE */
     src: local(@), url(/font/GT-Alpina-Regular.woff2) format('woff2'),
         /* everyone else take this */
-        url(font/GT-Alpina-Regular.woff2);
+        url(font/GT-Alpina-Regular.woff2),
+        url(font/GT-Alpina-Regular.woff2) format('woff2'),
+        /* Modern Browsers */
+        url(font/GT-Alpina-Regular.woff2) format('woff2'),
+        /* Safari, Android, iOS */
+        url(font/GT-Alpina-Regular.woff2) format('woff2');
     /* 다섯번째 */
 }
 
@@ -76,7 +81,12 @@
     /* here you go, IE */
     src: local(@), url(/font/GT-America-Standard-Regular.woff2) format('woff2'),
         /* everyone else take this */
-        url(/font/GT-America-Standard-Regular.woff2);
+        url(/font/GT-America-Standard-Regular.woff2),
+        url(font/GT-America-Standard-Regular.woff2) format('woff2'),
+        /* Modern Browsers */
+        url(font/GT-America-Standard-Regular.woff2) format('woff2'),
+        /* Safari, Android, iOS */
+        url(font/GT-America-Standard-Regular.woff2) format('woff2');;
     /* 다섯번째 */
 }
 
