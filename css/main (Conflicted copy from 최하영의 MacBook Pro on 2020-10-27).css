@@ -182,15 +182,12 @@ header {
 }
 
 .imgbtn span {
-    display: block;
+    display: inline-block;
+    position: absolute;
     font-family: 'GT America', sans-serif;
-    right: 0;
     width: 100%;
-}
-
-.img-btn-span {
-    position: relative;
-    top: 12px;
+    height: 30px;
+    bottom: 30px;
 }
 
 .imgbtn span a:hover {
@@ -202,8 +199,7 @@ header {
 #imgbtn {
     display: block;
     font-family: 'GT America', sans-serif;
-    font-size: 16px;
-    ;
+    font-size: 1em;
     height: 100%;
 }
 
@@ -234,12 +230,12 @@ nav {
     display: flex;
     justify-items: center;
     justify-content: space-between;
-    align-items: flex-end;
+    align-items: center;
     position: absolute;
     width: 24vw;
-    height: 12vh;
-    top: 30px;
-    right: calc(3vw + 30px);
+    height: 100%;
+    top: 0;
+    right: calc(3.3vw + 30px);
 }
 
 .navicon {
@@ -255,15 +251,14 @@ nav {
     width: 100%;
     display: block;
     text-align: center;
-    font-family: 'GT America', sans-serif;
-    font-size: 24px;
+    font-family: 'GT Alpina', serif;
+    font-size: 17px;
 }
 
 .navicon img {
     margin-bottom: 5px;
     width: 100%;
-    max-height: 8vh;
-    max-width: 100%;
+    max-height: 85px;
 }
 
 .wrapper {
@@ -301,16 +296,6 @@ nav {
     overflow-y: scroll;
     overflow-x: hidden;
     border-right: 1px solid black;
-}
-
-.menucon-mobile {
-    width: 100%;
-    height: auto;
-    display: flex;
-    flex-wrap: wrap;
-    overflow-y: scroll;
-    overflow-x: hidden;
-    display: none;
 }
 
 .menutype {
@@ -382,7 +367,6 @@ nav {
 .order-box.info {
     width: 100%;
     border-left: solid 1px black;
-    overflow-y: scroll;
 }
 
 
@@ -420,7 +404,7 @@ nav {
     text-align: right;
 }
 
-.add span[lang="en"] {
+.add span[lang=en] {
     font-family: 'GT America', sans-serif;
     white-space: nowrap;
 }
@@ -428,6 +412,7 @@ nav {
 .title {
     font-size: 30px;
     line-height: 120%;
+
 }
 
 .title span[lang="en"] {
@@ -435,10 +420,6 @@ nav {
     white-space: nowrap;
 }
 
-.title.baemin:hover span {
-    color: rgb(0, 120, 120);
-    font-weight: 600;
-}
 
 .sorting span[lang="en"] {
     font-family: 'GT America', sans-serif;
@@ -459,7 +440,7 @@ nav {
     width: 100%;
 }
 
-.price span[lang="en"] {
+.price span[lang=en] {
     width: auto;
     font-family: 'GT Alpina', sans-serif;
     font-size: 17px;
@@ -536,21 +517,14 @@ nav {
     text-decoration: none;
 }
 
-.order-menu {
-    display: inline-block;
-    width: 100%;
+.order {
     font-size: 72px;
     letter-spacing: -3px;
     margin-bottom: 80px;
-    text-align: center;
-}
-
-.menucon-mobile .order-menu {
-    margin-bottom: 30px;
 }
 
 .order-box .title img {
-    height: 56px;
+    height: 52px;
 }
 
 .order-box h3 {
@@ -596,7 +570,7 @@ nav {
     width: 100%;
     position: absolute;
     bottom: 30px;
-    font-size: 12px;
+    font-size: 0.8em;
     white-space: inherit;
 }
 
@@ -609,16 +583,8 @@ nav {
 }
 
 
-.slogans {
-    text-align: right;
-}
-
 .slogans img {
     margin-bottom: 120px;
-}
-
-.slogans img:nth-child(1) {
-    width: 84.4357%;
 }
 
 .mobile-nav {
@@ -627,57 +593,16 @@ nav {
     z-index: 999;
 }
 
-.tablet-nav {
-    display: none;
-    position: fixed;
-    z-index: 999;
+.mobile-nav .navicon {
+    width: auto;
 }
 
-.mobile-nav a:hover {
-    color: rgb(0, 120, 120);
-    text-decoration: none;
-    font-weight: 600;
-}
-
-.mobile-nav span {
-    width: 100%;
+.mobile-nav .navicon span {
     text-align: center;
     font-family: 'GT America', sans-serif;
-    display: inline-block;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.tablet-nav span:nth-child(1) {
-    margin-bottom: 10px;
-}
-
-.tablet-nav a:hover {
-    color: rgb(0, 120, 120);
-    text-decoration: none;
-    font-weight: 600;
-}
-
-.tablet-nav span {
-    width: 100%;
-    text-align: center;
-    font-family: 'GT America', sans-serif;
-    display: inline-block;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.mobile-nav span:nth-child(1) {
-    margin-bottom: 10px;
 }
 
 #menu {
-    position: relative;
-    width: 1px;
-    height: 1px;
-}
-
-#menu-tab {
     position: relative;
     width: 1px;
     height: 1px;
@@ -689,14 +614,7 @@ nav {
     height: 1px;
 }
 
-#tablet-menu {
-    display: none;
-}
 
-
-
-
-/*작은모니터*/
 
 @media screen and (min-width: 1001px) and (max-width: 1510px) {
 
@@ -708,7 +626,7 @@ nav {
     .navicon img {
         margin-bottom: 5px;
         width: 100%;
-        max-height: 6.5vh;
+        max-height: 60px;
     }
 
     .ingredients {
@@ -737,6 +655,19 @@ nav {
         display: none;
     }
 
+    .operationcon {
+        width: 100%;
+        flex-wrap: wrap;
+        font-size: 0.8em;
+    }
+
+    .operation {
+        width: 100%;
+    }
+
+    .operation:nth-child(1) {
+        margin-bottom: 30px;
+    }
 
     nav {
         display: flex;
@@ -747,7 +678,6 @@ nav {
         width: 30vw;
         height: 100%;
         right: 30px;
-        top: 5px;
     }
 
     .navicon {
@@ -756,20 +686,21 @@ nav {
         flex-wrap: wrap;
         justify-items: center;
         justify-content: center;
-        align-items: flex-end;
+        align-items: center;
     }
 
     .navicon span {
         width: 100%;
         display: block;
         text-align: center;
+        font-family: 'GT Alpina', serif;
         font-size: 16px;
     }
 
     .navicon img {
-        margin-bottom: 0px;
+        margin-bottom: 5px;
         width: 100%;
-        max-height: 4vh;
+        max-height: 40px;
     }
 
     .wrapper {
@@ -817,60 +748,16 @@ nav {
     .menucon::-webkit-scrollbar-thumb {
         background: black;
     }
-    
-   /*태블릿 메뉴 탑*/
-
-    #tablet-menu {
-        display: block;
-        width: 100%;
-        height: auto;
-        margin-bottom: 30px;
-    }
-
-    #tablet-menu .order-menu{
-        margin-bottom: 30px;
-    }
-    
-    .imgbtn-mobile span {
-        display: block;
-        font-family: 'GT America', sans-serif;
-        right: 0;
-        width: 50%;
-        float: left;
-        text-align: center;
-    }
-    
-    .img-btn-span {
-        position: relative;
-        top: 0;
-    }
-    
-    #imgbtn-t {
-        display: block;
-        font-family: 'GT America', sans-serif;
-        font-size: 16px;
-        margin: 0 auto;
-    }
-
-    .menu-title {
-        width: 100%;
-        font-size: 28px;
-    }
-
-    .menutype {
-        margin-right: 0;
-
-    }
 
     .title {
         font-size: 28px;
         line-height: 120%;
+        overflow: auto;
     }
 
     .title::-webkit-scrollbar {
         height: 0;
     }
-
 
     .title span[lang="ko"]::after {
         content: "\A";
@@ -878,7 +765,8 @@ nav {
     }
 
     .title span[lang="en"] {
-        white-space: normal !important;
+        white-space: wrap;
+        word-break: normal;
     }
 
     .ingredients {
@@ -910,12 +798,9 @@ nav {
         width: 40%;
     }
 
-    .ordertype:nth-last-child(1) {
-        margin-bottom: 0;
-    }
-
-    .slogans {
-        display: none;
+    .slogans img {
+        width: 60%;
+        margin-bottom: 120px;
     }
 
     .menucon::-webkit-scrollbar-thumb {
@@ -973,112 +858,68 @@ nav {
         width: 100%;
         position: relative;
         bottom: 0px;
-        font-size: 12px;
+        font-size: 0.8em;
         white-space: inherit;
-        margin-top: 60px;
-        display: flex;
+        margin-top: 30px;
     }
 
     .info-op div {
         margin-bottom: 0;
         width: 50%;
         float: left;
-        align-self: flex-end;
     }
 
     .info-op .kor {
         margin-bottom: 0;
     }
 
-    .tablet-nav {
+    .mobile-nav {
         display: block;
         bottom: 30px;
         right: 30px;
     }
 
-    .tablet-nav span {
+    .mobile-nav span {
         font-size: 28px;
     }
 
-    #menu-tab {
-        top: calc(-7vh - 60px);
+    #menu {
+        top: -120px;
     }
 
     #order {
-        top: calc(-7vh - 60px);
+        top: -120px;
     }
-
 
 }
 
-
-/*모바일*/
 @media screen and (min-width: 0px) and (max-width: 600px) {
 
-    body {
-        flex-wrap: nowrap;
-    }
+
 
     header {
         width: 100%;
-        position: absolute;
+        position: fixed;
         top: 0px;
         left: 0px;
-        height: auto;
+        height: 80px;
         overflow: hidden;
-        padding: 3.5vh 30px;
+        padding: 20px;
         background: white;
         z-index: 2;
-        display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;
     }
 
-    .logo {
-        width: 100%;
-        height: 10vh;
-    }
-
-    .logo img {
-        width: 100%;
-        max-width: 100%;
-        height: auto;
-        max-height: 10vh;
-    }
-
-    nav {
-        position: relative;
-        width: 90%;
-        height: 15vh;
-        top: 0;
-        padding: 5vh 0 0 0;
-        right: 0;
-        align-self: center;
-    }
-
-    .navicon {
-        width: 30%;
-        height: 10.5vh;
-        align-items: flex-end;
-    }
-
-    .navicon img {
-        margin-bottom: 0;
-        height: 6vh;
-        max-width: 20vw
-    }
-
-    .navicon span {
-        font-size: 20px;
-
+    .info-header {
+        height: 80px;
+        background: #f0eda1;
     }
 
     .wrapper {
         width: 100%;
         height: auto;
-        margin-top: 31.5vh;
+        margin-top: 80px;
         position: relative;
-        padding: 0 30px 0 30px;
+        padding: 0 20px 0 20px;
         bottom: 0;
     }
 
@@ -1093,7 +934,15 @@ nav {
     }
 
     .menucon {
-        display: none;
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-wrap: wrap;
+        overflow-y: scroll;
+        overflow-x: hidden;
+        order: 2;
+        float: left;
+        border-right: none;
     }
 
     .menucon::-webkit-scrollbar {
@@ -1102,36 +951,6 @@ nav {
 
     .menucon::-webkit-scrollbar-thumb {
         background: black;
-    }
-
-    .menucon-mobile {
-        display: block;
-        order: 2;
-    }
-
-
-
-    .menucon-mobile::-webkit-scrollbar {
-        width: 0;
-    }
-
-    .menucon-mobile::-webkit-scrollbar-thumb {
-        background: black;
-    }
-
-    .menu-title {
-        width: 100%;
-        font-size: 24px;
-    }
-
-    .menutype {
-        padding-top: 30px;
-        flex-wrap: wrap;
-    }
-
-    .menutype .dish:nth-last-child(1) {
-        border-bottom: none;
-        padding-bottom: 100px;
     }
 
     .menu {
@@ -1143,8 +962,18 @@ nav {
         margin-bottom: 30px;
     }
 
-    
+    .title span[lang="ko"] {
+        white-space: normal;
+    }
 
+    .title span[lang="en"]::before {
+        content: "\A";
+        white-space: pre
+    }
+
+    .title span[lang="en"] {
+        white-space: normal;
+    }
 
     .sorting {
         flex-wrap: wrap;
@@ -1172,7 +1001,7 @@ nav {
 
     .order-des {
         height: auto;
-        margin-bottom: 0;
+        margin-bottom: 0px;
     }
 
     .order-des img {
@@ -1180,12 +1009,26 @@ nav {
         width: 60%;
     }
 
-    .ordertype:nth-last-child(1) {
-        margin-bottom: 0;
-    }
-
     .menucon::-webkit-scrollbar-thumb {
         background: black;
+    }
+
+
+
+    .logo {
+        width: 150px;
+        height: 50px;
+        position: absolute;
+        left: 20px;
+        top: 15px;
+
+    }
+
+
+    .logo img {
+        top: 0;
+        left: 0;
+        width: 100%;
     }
 
 
@@ -1201,48 +1044,88 @@ nav {
         margin-bottom: 30px;
     }
 
+    nav {
+        display: flex;
+        justify-items: center;
+        justify-content: space-between;
+        align-items: center;
+        position: absolute;
+        width: 126px;
+        height: 50px;
+        top: 18px;
+        right: 20px;
+    }
 
-    header .imgbtn {
+    .navicon {
+        width: 35px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-items: center;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .navicon span {
+        width: 100%;
+        display: block;
+        text-align: center;
+        font-family: 'GT Alpina', serif;
+        font-size: 12px;
+    }
+
+    .navicon img {
+        margin-bottom: 5px;
+        width: 100%;
+        max-height: 28px;
+    }
+
+    .imgbtn {
         display: none;
     }
 
-    .imgbtn-mobile {
-        width: 100%;
-        height: 20px;
-        margin-bottom: 30px;
+    .fake-border {
+        display: none;
     }
 
-    .imgbtn-mobile span {
+    .imgbtn span {
         display: block;
+        width: 50%;
+        text-align: center;
         font-family: 'GT America', sans-serif;
         right: 0;
+        font-size: 12px;
+        float: left;
+    }
+
+    #imgbtn {
+        display: block;
         width: 50%;
         float: left;
-        text-align: center;
-    }
-
-    .img-btn-span {
-        position: relative;
-        top: 0;
-    }
-
-    .imgbtn-mobile span a:hover {
-        color: rgb(0, 120, 120);
-        font-weight: 600;
-        text-decoration: none;
-    }
-
-
-    #imgbtn-m {
-        display: block;
         font-family: 'GT America', sans-serif;
-        font-size: 16px;
-        margin: 0 auto;
+        font-size: 12px;
     }
 
     .slogans {
         display: none;
     }
+
+    .info-wrapper::-webkit-scrollbar {
+        width: 0px;
+    }
+
+    .info-wrapper {
+        width: 100%;
+        height: auto;
+        margin-top: 80px;
+        max-height: calc(100% - 80px);
+        padding: 0 20px 20px 20px;
+        bottom: 0;
+        background: #f0eda1;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+
 
     .info-col {
         width: 100%;
@@ -1276,7 +1159,7 @@ nav {
         bottom: 0px;
         font-size: 0.8em;
         white-space: inherit;
-        margin-top: 100px;
+        margin-top: 30px;
     }
 
     .info-op div {
@@ -1289,11 +1172,22 @@ nav {
         margin-bottom: 30px;
     }
 
+    .order-des {
+        margin-bottom: 60px;
+    }
+
+    .slogans.info {
+        display: block;
+    }
+
+    .slogans.info img {
+        margin-bottom: 30px;
+    }
+
     .mobile-nav {
         display: block;
-        bottom: 30px;
-        right: 30px;
-        width: auto;
+        bottom: 20px;
+        right: 20px;
     }
 
 
@@ -1301,47 +1195,29 @@ nav {
         font-size: 24px;
     }
 
-
-
     #menu {
-        top: -3.5vh;
+        top: -80px;
     }
 
     #order {
-        top: -32vh;
+        top: -80px;
     }
 
     .title {
         font-size: 24px;
-        overflow: hidden;
     }
-
-
-    .title span[lang="en"] {
-        white-space: nowrap;
-        word-break: break-all;
-    }
-
 
     .sorting {
-        font-size: 17px;
-    }
-
-    .add {
-        font-size: 16px;
-    }
-
-    .ingredients {
         font-size: 12px;
     }
 
-    .source {
-        padding-bottom: 100px;
+    .add {
+        font-size: 12px;
     }
 
 
     .dish {
-        grid-row-gap: 15px;
-        padding-bottom: 30px;
-        margin-bottom: 30px
+        grid-row-gap: 10px;
+        padding-bottom: 20px;
+        margin-bottom: 20px
     }
