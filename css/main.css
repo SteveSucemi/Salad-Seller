@@ -96,7 +96,7 @@ a {
     color: #000;
 }
 
-a:hover {
+nav a:hover {
     text-decoration: underline;
     color: #000;
 }
@@ -131,6 +131,28 @@ body {
     display: flex;
     flex-direction: column;
     /*    overflow: hidden;*/
+}
+
+@-webkit-keyframes hoverani {
+    0% {
+        color: black;
+    }
+
+    100% {
+        color: rgb(0, 120, 120);
+        font-weight: 600;
+    }
+}
+
+@keyframes hoverani {
+    0% {
+        color: black;
+    }
+
+    100% {
+        color: rgb(0, 120, 120);
+        font-weight: 600;
+    }
 }
 
 body::-webkit-scrollbar {
@@ -204,7 +226,7 @@ header {
     top: 12px;
 }
 
-.imgbtn span:hover {
+.imgbtn span a:hover {
     -webkit-animation-fill-mode: forwards;
     animation-fill-mode: forwards;
     -webkit-animation-name: hoverani;
@@ -215,6 +237,10 @@ header {
 }
 
 .imgbtn-mobile span a:hover {
+    text-decoration: none;
+}
+
+.imgbtn-mobile span a:active {
     -webkit-animation-fill-mode: forwards;
     animation-fill-mode: forwards;
     -webkit-animation-name: hoverani;
@@ -240,29 +266,9 @@ input {
 
 }
 
-@-webkit-keyframes hoverani {
-    0% {
-        color: black;
-    }
 
-    100% {
-        color: rgb(0, 120, 120);
-        font-weight: 600;
-    }
-}
 
-@keyframes hoverani {
-    0% {
-        color: black;
-    }
-
-    100% {
-        color: rgb(0, 120, 120);
-        font-weight: 600;
-    }
-}
-
-input:hover {
+#imgbtn:hover {
     cursor: pointer;
     -webkit-animation-fill-mode: forwards;
     animation-fill-mode: forwards;
@@ -695,6 +701,10 @@ nav {
     z-index: 999;
 }
 
+.mobile-nav a:hover {
+    text-decoration: none;
+}
+
 .mobile-nav a:active {
     text-decoration: none;
     -webkit-animation-fill-mode: forwards;
@@ -920,6 +930,20 @@ nav {
         font-family: 'GT America', sans-serif;
         font-size: 16px;
         margin: 0 auto;
+    }
+    
+    #imgbtn-t:hover {
+        text-decoration: none;
+    }
+    
+    #imgbtn-t:active {
+        -webkit-animation-fill-mode: forwards;
+        animation-fill-mode: forwards;
+        -webkit-animation-name: hoverani;
+        animation-name: hoverani;
+        -webkit-animation-duration: 0.05s;
+        animation-duration: 0.05s;
+        text-decoration: none;
     }
 
     .menu-title {
@@ -1290,6 +1314,10 @@ nav {
         float: left;
         text-align: center;
     }
+    
+    .imgbtn-mobile span a:hover {
+        
+    }
 
     .img-btn-span {
         position: relative;
@@ -1303,8 +1331,10 @@ nav {
         font-size: 16px;
         margin: 0 auto;
     }
+    
+    
 
-    #imgbtn-m a:active {
+    #imgbtn-m:active {
         -webkit-animation-fill-mode: forwards;
         animation-fill-mode: forwards;
         -webkit-animation-name: hoverani;
