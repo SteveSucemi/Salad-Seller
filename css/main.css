@@ -59,32 +59,22 @@
 @font-face {
     font-family: 'GT Alpina';
     src: local(GT Alpina);
-    /* 외부자원 참조 전에 시스템 글꼴을 우선 참조 */
     src: url(font/GT-Alpina-Regular.woff2);
-    /* here you go, IE */
     src: local(@), url(/font/GT-Alpina-Regular.woff2) format('woff2'),
-        /* everyone else take this */
-        url(font/GT-Alpina-Regular.woff2),
         url(font/GT-Alpina-Regular.woff2) format('woff2'),
-        /* Modern Browsers */
+        url(font/GT-Alpina-Regular.woff) format('woff'),
         url(font/GT-Alpina-Regular.ttf) format('truetype'),
-        /* Safari, Android, iOS */
         url(font/GT-Alpina-Regular.woff2) format('woff2');
 }
 
 @font-face {
     font-family: 'GT America';
     src: local(GT America);
-    /* 외부자원 참조 전에 시스템 글꼴을 우선 참조 */
     src: url(/font/GT-America-Standard-Regular.woff2);
-    /* here you go, IE */
     src: local(@), url(/font/GT-America-Standard-Regular.woff2) format('woff2'),
-        /* everyone else take this */
         url(/font/GT-America-Standard-Regular.woff2) format('woff2'),
-        url(font/GT-America-Standard-Regular.woff2) format('woff2'),
-        /* Modern Browsers */
+        url(font/GT-America-Standard-Regular.woff) format('woff'),
         url(font/GT-America-Standard-Regular.ttf) format('truetype'),
-        /* Safari, Android, iOS */
         url(font/GT-America-Standard-Regular.woff2) format('woff2');
 }
 
