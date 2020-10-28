@@ -60,7 +60,7 @@
     font-family: 'GT Alpina';
     src: local(GT Alpina);
     src: url(font/GT-Alpina-Regular.woff2);
-    src: local(@), url(/font/GT-Alpina-Regular.woff2) format('woff2'),
+    src: local(@), url(font/GT-Alpina-Regular.woff2) format('woff2'),
         url(font/GT-Alpina-Regular.woff2) format('woff2'),
         url(font/GT-Alpina-Regular.woff) format('woff'),
         url(font/GT-Alpina-Regular.ttf) format('truetype'),
@@ -70,9 +70,9 @@
 @font-face {
     font-family: 'GT America';
     src: local(GT America);
-    src: url(/font/GT-America-Standard-Regular.woff2);
-    src: local(@), url(/font/GT-America-Standard-Regular.woff2) format('woff2'),
-        url(/font/GT-America-Standard-Regular.woff2) format('woff2'),
+    src: url(font/GT-America-Standard-Regular.woff2);
+    src: local(@), url(font/GT-America-Standard-Regular.woff2) format('woff2'),
+        url(font/GT-America-Standard-Regular.woff2) format('woff2'),
         url(font/GT-America-Standard-Regular.woff) format('woff'),
         url(font/GT-America-Standard-Regular.ttf) format('truetype'),
         url(font/GT-America-Standard-Regular.woff2) format('woff2');
