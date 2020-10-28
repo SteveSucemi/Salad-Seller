@@ -81,12 +81,13 @@
     /* here you go, IE */
     src: local(@), url(/font/GT-America-Standard-Regular.woff2) format('woff2'),
         /* everyone else take this */
-        url(/font/GT-America-Standard-Regular.woff2),
+        url(/font/GT-America-Standard-Regular.woff2) format('woff2'),
         url(font/GT-America-Standard-Regular.woff2) format('woff2'),
         /* Modern Browsers */
         url(font/GT-America-Standard-Regular.woff2) format('woff2'),
         /* Safari, Android, iOS */
-        url(font/GT-America-Standard-Regular.woff2) format('woff2');;
+        url(font/GT-America-Standard-Regular.woff2) format('woff2');
+    ;
     /* 다섯번째 */
 }
 
@@ -203,9 +204,23 @@ header {
     top: 12px;
 }
 
-.imgbtn span a:hover {
-    color: rgb(0, 120, 120);
-    font-weight: 600;
+.imgbtn span:hover {
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    -webkit-animation-name: hoverani;
+    animation-name: hoverani;
+    -webkit-animation-duration: 0.05s;
+    animation-duration: 0.05s;
+    text-decoration: none;
+}
+
+.imgbtn-mobile span a:hover {
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    -webkit-animation-name: hoverani;
+    animation-name: hoverani;
+    -webkit-animation-duration: 0.05s;
+    animation-duration: 0.05s;
     text-decoration: none;
 }
 
@@ -225,11 +240,39 @@ input {
 
 }
 
+@-webkit-keyframes hoverani {
+    0% {
+        color: black;
+    }
+
+    100% {
+        color: rgb(0, 120, 120);
+        font-weight: 600;
+    }
+}
+
+@keyframes hoverani {
+    0% {
+        color: black;
+    }
+
+    100% {
+        color: rgb(0, 120, 120);
+        font-weight: 600;
+    }
+}
+
 input:hover {
     cursor: pointer;
-    color: rgb(0, 120, 120);
-    font-weight: 600;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    -webkit-animation-name: hoverani;
+    animation-name: hoverani;
+    -webkit-animation-duration: 0.05s;
+    animation-duration: 0.05s;
 }
+
+
 
 .imgbtn span:after {
     height: 1px;
@@ -445,8 +488,12 @@ nav {
 }
 
 .title.baemin:hover span {
-    color: rgb(0, 120, 120);
-    font-weight: 600;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    -webkit-animation-name: hoverani;
+    animation-name: hoverani;
+    -webkit-animation-duration: 0.05s;
+    animation-duration: 0.05s;
 }
 
 .sorting span[lang="en"] {
@@ -540,8 +587,12 @@ nav {
 }
 
 .ordertype a:hover {
-    color: rgb(0, 120, 120);
-    font-weight: 600;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    -webkit-animation-name: hoverani;
+    animation-name: hoverani;
+    -webkit-animation-duration: 0.05s;
+    animation-duration: 0.05s;
     text-decoration: none;
 }
 
@@ -643,9 +694,13 @@ nav {
 }
 
 .mobile-nav a:hover {
-    color: rgb(0, 120, 120);
     text-decoration: none;
-    font-weight: 600;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    -webkit-animation-name: hoverani;
+    animation-name: hoverani;
+    -webkit-animation-duration: 0.05s;
+    animation-duration: 0.05s;
 }
 
 .mobile-nav span {
@@ -662,9 +717,13 @@ nav {
 }
 
 .tablet-nav a:hover {
-    color: rgb(0, 120, 120);
     text-decoration: none;
-    font-weight: 600;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    -webkit-animation-name: hoverani;
+    animation-name: hoverani;
+    -webkit-animation-duration: 0.05s;
+    animation-duration: 0.05s;
 }
 
 .tablet-nav span {
@@ -826,8 +885,8 @@ nav {
     .menucon::-webkit-scrollbar-thumb {
         background: black;
     }
-    
-   /*태블릿 메뉴 탑*/
+
+    /*태블릿 메뉴 탑*/
 
     #tablet-menu {
         display: block;
@@ -836,10 +895,10 @@ nav {
         margin-bottom: 30px;
     }
 
-    #tablet-menu .order-menu{
+    #tablet-menu .order-menu {
         margin-bottom: 30px;
     }
-    
+
     .imgbtn-mobile span {
         display: block;
         font-family: 'GT America', sans-serif;
@@ -848,12 +907,12 @@ nav {
         float: left;
         text-align: center;
     }
-    
+
     .img-btn-span {
         position: relative;
         top: 0;
     }
-    
+
     #imgbtn-t {
         display: block;
         font-family: 'GT America', sans-serif;
@@ -1152,7 +1211,7 @@ nav {
         margin-bottom: 30px;
     }
 
-    
+
 
 
     .sorting {
@@ -1236,8 +1295,12 @@ nav {
     }
 
     .imgbtn-mobile span a:hover {
-        color: rgb(0, 120, 120);
-        font-weight: 600;
+        -webkit-animation-fill-mode: forwards;
+        animation-fill-mode: forwards;
+        -webkit-animation-name: hoverani;
+        animation-name: hoverani;
+        -webkit-animation-duration: 0.05s;
+        animation-duration: 0.05s;
         text-decoration: none;
     }
 
