@@ -687,13 +687,25 @@ nav {
     z-index: 999;
 }
 
+.mobile-nav a:hover {
+    color: rgb(0, 120, 120);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.tablet-nav a:hover {
+    color: rgb(0, 120, 120);
+    text-decoration: none;
+    font-weight: 600;
+}
+
 .tablet-nav {
     display: none;
     position: fixed;
     z-index: 999;
 }
 
-.mobile-nav a:hover {
+.mobile-nav a:active {
     text-decoration: none;
     -webkit-animation-fill-mode: forwards;
     animation-fill-mode: forwards;
@@ -716,7 +728,7 @@ nav {
     margin-bottom: 10px;
 }
 
-.tablet-nav a:hover {
+.tablet-nav a:active {
     text-decoration: none;
     -webkit-animation-fill-mode: forwards;
     animation-fill-mode: forwards;
@@ -1293,8 +1305,16 @@ nav {
         position: relative;
         top: 0;
     }
+    
+    
+    #imgbtn-m {
+        display: block;
+        font-family: 'GT America', sans-serif;
+        font-size: 16px;
+        margin: 0 auto;
+    }
 
-    .imgbtn-mobile span a:hover {
+    #imgbtn-m a:active {
         -webkit-animation-fill-mode: forwards;
         animation-fill-mode: forwards;
         -webkit-animation-name: hoverani;
@@ -1305,12 +1325,6 @@ nav {
     }
 
 
-    #imgbtn-m {
-        display: block;
-        font-family: 'GT America', sans-serif;
-        font-size: 16px;
-        margin: 0 auto;
-    }
 
     .slogans {
         display: none;
